@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TiamoLappland</title>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --text: #333;
+      --accent: #e74c3c;
+      --secondary: #3498db;
+      --card-bg: #fff;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.7;
+    }
+    header {
+      text-align: center;
+      padding: 40px 0;
+      border-bottom: 3px solid var(--accent);
+      margin-bottom: 30px;
+    }
+    header h1 {
+      color: var(--accent);
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header p {
+      color: #888;
+      margin-top: 10px;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: var(--secondary);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover { color: var(--accent); }
+    main {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: var(--accent);
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+    a { color: var(--secondary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th { background: var(--accent); color: white; }
+    tr:nth-child(even) { background: #f8f9fa; }
+    footer {
+      text-align: center;
+      color: #aaa;
+      padding: 30px 0;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+    blockquote {
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TiamoLappland</h1>
+    <p>My Personal GitHub Pages</p>
+  </header>
+
+  <nav>
+    <a href="/">🏠 首页</a>
+    <a href="/about.html">👤 关于</a>
+    <a href="https://github.com/Tiamolappland" target="_blank">🐙 GitHub</a>
+  </nav>
+
+  <main>
+    <h1>👋 Hello, I'm TiamoLappland!</h1>
+    <p>Welcome to my GitHub Pages site powered by Jekyll.</p>
+    
+    <h2>About Me</h2>
+    <ul>
+      <li>🎓 Student learning deep learning & big data</li>
+      <li>💻 Building cool projects with PyTorch</li>
+      <li>🤖 Exploring AI and robotics</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <table>
+      <thead>
+        <tr><th>Project</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>MNIST Classifier</td><td>MLP + backpropagation with PyTorch</td></tr>
+        <tr><td>Manbo Robot</td><td>ASRPRO-V2.0 voice-controlled robot</td></tr>
+        <tr><td>Big Data</td><td>Hadoop ecosystem on Ubuntu VM</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Contact</h2>
+    <ul>
+      <li>📧 Email: your-email@example.com</li>
+      <li>🐙 GitHub: <a href="https://github.com/Tiamolappland">Tiamolappland</a></li>
+    </ul>
+
+    <hr />
+    <blockquote>💡 This site is built with Jekyll and deployed on GitHub Pages.</blockquote>
+  </main>
+
+  <footer>
+    © 2026 Tiamolappland · Powered by Jekyll & GitHub Pages
+  </footer>
+</body>
+</html>

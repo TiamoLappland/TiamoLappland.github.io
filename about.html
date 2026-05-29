@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我</title>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --text: #333;
+      --accent: #e74c3c;
+      --secondary: #3498db;
+      --card-bg: #fff;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.7;
+    }
+    header {
+      text-align: center;
+      padding: 40px 0;
+      border-bottom: 3px solid var(--accent);
+      margin-bottom: 30px;
+    }
+    header h1 {
+      color: var(--accent);
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header p {
+      color: #888;
+      margin-top: 10px;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: var(--secondary);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover { color: var(--accent); }
+    main {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: var(--accent);
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+    a { color: var(--secondary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      color: #aaa;
+      padding: 30px 0;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+    blockquote {
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TiamoLappland</h1>
+    <p>My Personal GitHub Pages</p>
+  </header>
+
+  <nav>
+    <a href="/">🏠 首页</a>
+    <a href="/about.html">👤 关于</a>
+    <a href="https://github.com/Tiamolappland" target="_blank">🐙 GitHub</a>
+  </nav>
+
+  <main>
+    <h1>👤 About Me</h1>
+    <p>你好！我是 <strong>Tiamolappland</strong>，一名在读学生。</p>
+    
+    <h2>学习与技能</h2>
+    <ul>
+      <li>🧠 <strong>深度学习</strong>：PyTorch, CNN, RNN, MLP</li>
+      <li>📊 <strong>大数据</strong>：Hadoop, HBase, Redis, MongoDB</li>
+      <li>🤖 <strong>嵌入式</strong>：ASRPRO 开发板, 舵机控制</li>
+    </ul>
+
+    <h2>当前项目</h2>
+    <h3>1. MNIST 手写数字识别</h3>
+    <p>使用 PyTorch 实现的多层感知机（MLP）+ 反向传播算法。</p>
+    
+    <h3>2. 曼波语音机器人</h3>
+    <p>基于 ASRPRO-V2.0 的智能语音控制机器人，支持语音命令操作。</p>
+    
+    <h3>3. 大数据基础实验</h3>
+    <p>在 Ubuntu 虚拟机上部署的完整 Hadoop 生态集群。</p>
+
+    <h2>联系方式</h2>
+    <ul>
+      <li>📧 邮箱：your-email@example.com</li>
+      <li>🐙 GitHub：<a href="https://github.com/Tiamolappland">Tiamolappland</a></li>
+    </ul>
+
+    <hr />
+    <blockquote>🌟 欢迎访问我的 GitHub 了解更多项目！</blockquote>
+  </main>
+
+  <footer>
+    © 2026 Tiamolappland · Powered by Jekyll & GitHub Pages
+  </footer>
+</body>
+</html>
