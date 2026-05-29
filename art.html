@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我</title>
+  <title>作品集</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -149,33 +149,6 @@
       margin-bottom: 16px;
     }
     
-    a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    a:hover { color: var(--accent-orange); }
-    
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    
-    li {
-      color: var(--text-secondary);
-      padding: 8px 0;
-      padding-left: 24px;
-      position: relative;
-    }
-    
-    li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--accent-orange);
-    }
-    
     footer {
       position: relative; z-index: 1;
       text-align: center;
@@ -186,14 +159,76 @@
       margin-top: 60px;
     }
     
-    blockquote {
-      border-left: 4px solid var(--accent-blue);
-      padding: 16px 20px;
-      margin: 20px 0;
-      background: rgba(79,195,247,0.05);
-      border-radius: 0 12px 12px 0;
-      color: var(--text-secondary);
-      font-style: italic;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+    
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease;
+    }
+    
+    .gallery-item:hover img {
+      filter: brightness(1.1);
+    }
+    
+    .gallery-item .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.9));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+    
+    .gallery-item .overlay h4 {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .gallery-item .overlay p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    
+    .tag {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(255,107,53,0.2), rgba(79,195,247,0.2));
+      color: var(--text-primary);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      margin: 4px 8px 4px 0;
+      border: 1px solid rgba(255,255,255,0.1);
     }
     
     @media (max-width: 600px) {
@@ -210,41 +245,44 @@
 
   <nav>
     <a href="/">🏠 首页</a>
-    <a href="/about.html" class="active">👤 关于</a>
-    <a href="/art.html">🎨 作品集</a>
+    <a href="/about.html">👤 关于</a>
+    <a href="/art.html" class="active">🎨 作品集</a>
     <a href="https://github.com/Tiamolappland" target="_blank">🐙 GitHub</a>
   </nav>
 
   <main>
     <div class="card">
-      <h1>👤 About Me</h1>
-      <p>你好！我是 <strong>Tiamolappland</strong>，一名在读学生。</p>
+      <h2>🎨 个人绘画作品集</h2>
+      <p>这里展示我平时的绘画练习和创作，主要以二次元角色为主。</p>
       
-      <h2>学习与技能</h2>
-      <ul>
-        <li>🧠 <strong>深度学习</strong>：PyTorch, CNN, RNN, MLP</li>
-        <li>📊 <strong>大数据</strong>：Hadoop, HBase, Redis, MongoDB</li>
-        <li>🤖 <strong>嵌入式</strong>：ASRPRO 开发板, 舵机控制</li>
-        <li>🎨 <strong>数字绘画</strong>：Clip Studio Paint, Procreate</li>
-      </ul>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=anime%20style%20two%20cute%20wolf%20girls%20having%20hotpot%20dinner%20together%20in%20a%20cozy%20Chinese%20restaurant%2C%20one%20with%20dark%20blue%20hair%20and%20orange%20eyes%2C%20the%20other%20with%20silver%20hair%20and%20blue%20eyes%2C%20chibi%20style%2C%20warm%20lighting%2C%20detailed%20background%2C%20professional%20digital%20art%2C%20Arknights%20fanart&image_size=landscape_4_3" alt="Hotpot Date">
+          <div class="overlay">
+            <h4>火锅约会</h4>
+            <p>德克萨斯 & 拉普兰德 | 明日方舟同人</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=anime%20style%20two%20cool%20wolf%20girls%20posing%20together%2C%20one%20with%20dark%20blue%20hair%20wearing%20red%20business%20outfit%2C%20the%20other%20with%20silver%20hair%20wearing%20purple%20punk%20style%20clothes%2C%20holding%20drinks%2C%20chibi%20style%2C%20white%20background%2C%20professional%20digital%20art%2C%20Arknights%20fanart&image_size=landscape_4_3" alt="Drink Together">
+          <div class="overlay">
+            <h4>干杯时刻</h4>
+            <p>德克萨斯 & 拉普兰德 | 明日方舟同人</p>
+          </div>
+        </div>
+      </div>
       
-      <h2>当前项目</h2>
-      <h3>1. MNIST 手写数字识别</h3>
-      <p>使用 PyTorch 实现的多层感知机（MLP）+ 反向传播算法。</p>
-      
-      <h3>2. 曼波语音机器人</h3>
-      <p>基于 ASRPRO-V2.0 的智能语音控制机器人，支持语音命令操作。</p>
-      
-      <h3>3. 大数据基础实验</h3>
-      <p>在 Ubuntu 虚拟机上部署的完整 Hadoop 生态集群。</p>
-      
-      <h2>联系方式</h2>
-      <ul>
-        <li>📧 邮箱：your-email@example.com</li>
-        <li>🐙 GitHub：<a href="https://github.com/Tiamolappland">Tiamolappland</a></li>
-      </ul>
-      
-      <blockquote>🌟 欢迎访问我的 GitHub 了解更多项目！</blockquote>
+      <div style="margin-top: 40px;">
+        <h3>关于我的创作</h3>
+        <p>我喜欢绘制二次元风格的插画，尤其喜欢明日方舟中的角色。绘画是我放松和表达创意的方式，让我能够在代码之外找到另一种创作的乐趣。</p>
+        <div style="margin-top: 16px;">
+          <span class="tag">明日方舟</span>
+          <span class="tag">二次元</span>
+          <span class="tag">插画</span>
+          <span class="tag">同人创作</span>
+        </div>
+      </div>
     </div>
   </main>
 
